@@ -33,6 +33,8 @@ median(sumbydate$steps, na.rm = TRUE)
 
 ![alt text](https://github.com/huiyilee/RepData_PeerAssessment1/blob/master/plot1.png)
 
+The mean is 10766.19, median is 10765.
+
 ## Average daily activity pattern
 
 Make a time series plot of the average number of steps taken for each 5-minute interval, averaged across all days in the dataset.
@@ -67,6 +69,7 @@ Calculate and report the total number of missing values in the dataset:
 ```{r}
 sum(is.na(activity))
 ```
+There are 2304 missing values in the dataset.
 
 Use the average number of steps for the relevant 5-minute interval to fill in missing values.
 
@@ -89,7 +92,7 @@ median(sumbydate2$steps, na.rm = TRUE)
 ```
 ![alt text](https://github.com/huiyilee/RepData_PeerAssessment1/blob/master/plot3.png)
 
-Note that the mean is the same as in the first part of assignment, since we filled in NA values based on average number of steps for the relevant 5-minute interval. However median is slightly higher at 10766.19 compared to 10765 from first part of assignment. 
+Note that the mean of 10766.19 is the same as in the first part of assignment, since we filled in NA values based on average number of steps for the relevant 5-minute interval. However median is slightly higher at 10766.19 compared to 10765 from first part of assignment. 
 
 ## Activity patterns, weekdays versus weekends
 
