@@ -26,12 +26,12 @@ meltdate <- melt(activity, id = c("date"))
 sumbydate <- cast(meltdate, date ~ variable, sum)
 plot1 <- hist(sumbydate$steps, main = "Distribution of total steps per day", xlab = "Total steps per day")
 
-![alt text](https://github.com/huiyilee/RepData_PeerAssessment1/blob/master/plot1.png)
-
 mean(sumbydate$steps, na.rm = TRUE)
 median(sumbydate$steps, na.rm = TRUE)
 
 ```
+
+![alt text](https://github.com/huiyilee/RepData_PeerAssessment1/blob/master/plot1.png)
 
 ## Average daily activity pattern
 
@@ -51,13 +51,13 @@ avbyint$min <- seq( from = 0, to = 1435, by = 5)
 
 plot2 <- plot(avbyint$min, avbyint$steps, type = "l", xlab = "Time interval (in minutes)", ylab = "Average number of steps")
 
-![alt text](https://github.com/huiyilee/RepData_PeerAssessment1/blob/master/plot2.png)
-
 ## Sort to get interval with the maximum number of steps, and subset to get the first row.
 avbyint <- avbyint[order(-avbyint$steps), ]
 avbyint[1, ]
 
 ```
+
+![alt text](https://github.com/huiyilee/RepData_PeerAssessment1/blob/master/plot2.png)
 
 The time interval 515 to 520 minutes, or 8.45-8.50am, has the maximum number of steps of 206.17.
 
